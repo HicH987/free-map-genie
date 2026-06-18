@@ -19,7 +19,7 @@ if (fs.existsSync(artifacts)) {
     fs.rmSync(artifacts, { recursive: true });
 }
 
-execSync("npx web-ext sign", {
+execSync("npx web-ext sign --channel=unlisted", {
     cwd: folder,
     env: env.parsed,
     stdio: "inherit"
